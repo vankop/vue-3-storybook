@@ -1,11 +1,11 @@
-import { Component, VueConstructor } from 'vue';
+import { Component } from 'vue';
 import { StoryFn } from '@storybook/addons';
 export interface ShowErrorArgs {
     title: string;
     description: string;
 }
 export interface RenderMainArgs {
-    storyFn: StoryFn<VueConstructor>;
+    storyFn: StoryFn<Component>;
     selectedKind: string;
     selectedStory: string;
     showMain: () => void;

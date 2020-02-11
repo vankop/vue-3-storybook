@@ -45,14 +45,12 @@ export default function render({
   showMain();
 
   // at component creation || refresh by HMR
-  if (!root[COMPONENT] || !forceRender) {
-    root[COMPONENT] = element;
+  // @ts-ignore
+	if (!root[COMPONENT] || !forceRender) {
+    // @ts-ignore
+		root[COMPONENT] = element;
   }
 
   // @ts-ignore https://github.com/storybookjs/storybook/pull/7578#discussion_r307986139
   root[VALUES] = element.options[VALUES];
-
-  if (!root.$el) {
-    root.mount('#root');
-  }
 }
