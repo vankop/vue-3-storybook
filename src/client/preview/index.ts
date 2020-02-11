@@ -1,6 +1,7 @@
 /* eslint-disable prefer-destructuring */
 // @ts-ignore
 import Vue, { VueConstructor, ComponentOptions } from 'vue';
+import '@vue/runtime-dom';
 import { start } from '@storybook/core/client';
 import {
   ClientStoryApi,

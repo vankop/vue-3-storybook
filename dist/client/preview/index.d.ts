@@ -1,5 +1,6 @@
 /// <reference types="webpack-env" />
 /// <reference types="node" />
+import '@vue/runtime-dom';
 import { ClientStoryApi, Loadable } from '@storybook/addons';
 import './globals';
 import { IStorybookSection, StoryFnVueReturnType } from './types';

@@ -11,6 +11,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.raw = exports.getStorybook = exports.forceReRender = exports.setAddon = exports.clearDecorators = exports.addParameters = exports.addDecorator = exports.configure = exports.storiesOf = exports.WRAPS = void 0;
 
+require("@vue/runtime-dom");
+
 var _client = require("@storybook/core/client");
 
 require("./globals");
