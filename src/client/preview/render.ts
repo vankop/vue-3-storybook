@@ -1,6 +1,6 @@
 import dedent from 'ts-dedent';
 // @ts-ignore
-import { createApp, createBlock } from 'vue'
+import { createApp, h } from 'vue'
 import { RenderMainArgs } from './types';
 
 export const COMPONENT = 'STORYBOOK_COMPONENT';
@@ -15,8 +15,8 @@ const root = createApp({
 		};
 	},
 	render() {
-		const children = this[COMPONENT] ? [createBlock(this[COMPONENT])] : undefined;
-		return createBlock('div', { attrs: { id: 'root' } }, children)
+		const children = this[COMPONENT] ? [h(this[COMPONENT])] : undefined;
+		return h('div', { id: 'root' }, children)
 	}
 }).mount('#root')
 
@@ -52,5 +52,5 @@ export default function render({
   }
 
   // @ts-ignore https://github.com/storybookjs/storybook/pull/7578#discussion_r307986139
-  root[VALUES] = element.options[VALUES];
+  // root[VALUES] = element.options[VALUES];
 }

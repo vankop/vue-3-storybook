@@ -47,11 +47,9 @@ var root = (0, _vue.createApp)({
     return _ref = {}, _defineProperty(_ref, COMPONENT, undefined), _defineProperty(_ref, VALUES, {}), _ref;
   },
   render: function render() {
-    var children = this[COMPONENT] ? [(0, _vue.createBlock)(this[COMPONENT])] : undefined;
-    return (0, _vue.createBlock)('div', {
-      attrs: {
-        id: 'root'
-      }
+    var children = this[COMPONENT] ? [(0, _vue.h)(this[COMPONENT])] : undefined;
+    return (0, _vue.h)('div', {
+      id: 'root'
     }, children);
   }
 }).mount('#root');
@@ -81,7 +79,6 @@ function render(_ref2) {
     // @ts-ignore
     root[COMPONENT] = element;
   } // @ts-ignore https://github.com/storybookjs/storybook/pull/7578#discussion_r307986139
+  // root[VALUES] = element.options[VALUES];
 
-
-  root[VALUES] = element.options[VALUES];
 }
